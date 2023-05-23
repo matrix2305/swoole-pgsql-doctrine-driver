@@ -1,0 +1,44 @@
+{
+    "name": "matrix2305/swoole-pgslq-doctrine-driver",
+    "description": "A Doctrine DBAL Driver implementation on top of Swoole Coroutine PostgreSql extension",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Diego Rin Martín",
+            "email": "yosoy@diego.ninja"
+        },
+        {
+            "name": "leocavalcante",
+            "email": "lc@leocavalcante.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "scripts": {
+        "test": "pest"
+    },
+    "require": {
+        "php": "^8.0",
+        "ext-pdo": "*",
+        "doctrine/dbal": "^2.13.3"
+    },
+    "suggest": {
+        "ext-swoole": "You need either ext-swoole or ext-openswoole",
+        "ext-openswoole": "You need either ext-swoole or ext-openswoole"
+    },
+    "autoload": {
+        "psr-4": {
+            "Doctrine\\DBAL\\Driver\\Swoole\\Coroutine\\PgSQL\\": "src/"
+        }
+    },
+    "require-dev": {
+        "pestphp/pest": "^1.0",
+        "swoole/ide-helper": "^4.6"
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/package-versions-deprecated": true,
+            "pestphp/pest-plugin": true
+        }
+    }
+}
